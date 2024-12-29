@@ -5,11 +5,12 @@ public class Main {
 
         Adopter adopter = new Adopter("Stepa", "stepa123@gmail.com");
 
-        Shelter shelter = new Shelter("Shelter", "shelter123@gmail.com");
+        Shelter shelter = new Shelter("Shelter", "ShelterAY, GreenHills, 173");
         shelter.addPet(pet1);
         shelter.addPet(pet2);
+        System.out.println(pet1.getName() + " " + pet1.getType() + " " + pet1.getAge());
 
-        shelter.listPets();
+        System.out.println(pet2.getName() + " " + pet2.getType() + " " +  pet2.getAge());
 
         adopter.displayAdopterDetails();
 
