@@ -1,23 +1,24 @@
 public class Main {
     public static void main(String[] args) {
-        Pet pet1 = new Pet("Sharik", "Dog", 3);
-        Pet pet2 = new Pet("Kuki", "Cat", 5);
+        // Create Shelter
+        Shelter shelter = new Shelter("Happy Tails", "123 Main St");
 
-        Adopter adopter = new Adopter("Stepa", "stepa123@gmail.com");
+        // Add Pets
+        shelter.addPet1(new Pet("Bella", "Dog", 3));
+        shelter.addPet2(new Pet("Milo", "Cat", 2));
+        shelter.addPet3(new Pet("Max", "Dog", 5));
 
-        Shelter shelter = new Shelter("Shelter", "ShelterAY, GreenHills, 173");
-        shelter.addPet(pet1);
-        shelter.addPet(pet2);
-        System.out.println(pet1.getName() + " " + pet1.getType() + " " + pet1.getAge());
+        // Display All Pets
+        System.out.println("All Pets in Shelter:");
+        shelter.displayPets();
 
-        System.out.println(pet2.getName() + " " + pet2.getType() + " " +  pet2.getAge());
+        // Filter by Type
+        shelter.filterByType("Dog");
 
-        adopter.displayAdopterDetails();
+        // Search by Name
+        shelter.searchByName("Milo");
 
-        if (pet1.getAge() > pet2.getAge()) {
-            System.out.println(pet1.getName() + " is older than " + pet2.getName());
-        } else {
-            System.out.println(pet2.getName() + " is older than " + pet1.getAge());
-        }
+        // Display Shelter Information
+        System.out.println("Shelter Details: " + shelter);
     }
 }
