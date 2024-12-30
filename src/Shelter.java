@@ -55,14 +55,6 @@ public class Shelter {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        Shelter shelter = (Shelter) obj;
-        return name.equals(shelter.name) && location.equals(shelter.location);
-    }
-
-    @Override
     public int hashCode() {
         return Objects.hash(name, location);
     }
